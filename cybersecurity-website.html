@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Forum - مكافحة الابتزاز الإلكتروني</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+        
+        :root {
+            --primary-gradient: linear-gradient(45deg, #FF0844, #FFB199);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #0a0a0a;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('/api/placeholder/1920/1080') center/cover;
+            min-height: 100vh;
+        }
+
+        .gradient-text {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(255, 8, 68, 0.2);
+        }
+
+        .gradient-button {
+            background: var(--primary-gradient);
+            transition: all 0.3s ease;
+        }
+
+        .gradient-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 8, 68, 0.4);
+        }
+
+        .card-hover-effect {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 8, 68, 0.15);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .developer-badge {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--primary-gradient);
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 8, 68, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl font-black gradient-text">Dark Forum</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="nav-link">الرئيسية</a>
+                    <a href="#instructions" class="nav-link">تعليمات</a>
+                    <a href="#help" class="nav-link">المساعدة</a>
+                    <a href="#contact" class="nav-link">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-center">
+        <div class="container mx-auto px-6" data-aos="fade-up">
+            <h1 class="text-6xl md:text-7xl font-black mb-8 gradient-text">لا تستسلم للابتزاز</h1>
+            <p class="text-2xl md:text-3xl text-gray-300 mb-12">نحن هنا لمساعدتك وحمايتك بسرية تامة</p>
+            <a href="#help" class="gradient-button text-white font-bold py-4 px-12 rounded-full text-xl inline-block">
+                احصل على المساعدة الآن
+            </a>
+        </div>
+    </section>
+
+    <!-- Instructions Section -->
+    <section id="instructions" class="py-32">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-20 gradient-text" data-aos="fade-up">خطوات مهمة</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="glass-card p-8" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">خطوات فورية</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start space-x-4">
+                            <span class="text-red-500">1.</span>
+                            <p>لا تستجب لمطالب المبتز - تجاهل التهديدات</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-red-500">2.</span>
+                            <p>احتفظ بجميع الأدلة والمحادثات</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-red-500">3.</span>
+                            <p>قم بتأمين حساباتك فوراً وتغيير كلمات المرور</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-red-500">4.</span>
+                            <p>تواصل معنا للحصول على المساعدة الفورية</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-6 gradient-text">نصائح مهمة</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li>❌ لا تقم بالدفع أبداً - سيزيد الابتزاز</li>
+                        <li>✅ تحدث مع شخص تثق به</li>
+                        <li>✅ وثّق كل شيء</li>
+                        <li>❌ لا تحذف أي دليل</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section id="help" class="py-32 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center mb-20 gradient-text" data-aos="fade-up">كيف نساعدك</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="glass-card p-8" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">الدعم التقني</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li>• تأمين الحسابات</li>
+                        <li>• استعادة الحسابات المخترقة</li>
+                        <li>• حماية البيانات الشخصية</li>
+                        <li>• تتبع المبتز تقنياً</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">الدعم القانوني</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li>• استشارات قانونية مجانية</li>
+                        <li>• تقديم البلاغات الرسمية</li>
+                        <li>• التواصل مع الجهات المختصة</li>
+                        <li>• متابعة القضية قانونياً</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">الدعم النفسي</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li>• جلسات دعم نفسي</li>
+                        <li>• استشارات متخصصة</li>
+                        <li>• خطة تعافي شخصية</li>
+                        <li>• متابعة مستمرة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="glass-card p-12 max-w-4xl mx-auto" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">تواصل معنا</h2>
+                <p class="text-gray-300 text-center mb-8">نحن هنا للمساعدة 24/7. كل المعلومات سرية تماماً</p>
+                <form id="contactForm" class="space-y-6">
+                    <div class="space-y-2">
+                        <input type="text" placeholder="الاسم (اختياري)" class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none">
+                    </div>
+                    <div class="space-y-2">
+                        <input type="email" placeholder="البريد الإلكتروني" class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none" required>
+                    </div>
+                    <div class="space-y-2">
+                        <select class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none">
+                            <option value="">نوع المساعدة المطلوبة</option>
+                            <option value="technical">دعم تقني</option>
+                            <option value="legal">دعم قانوني</option>
+                            <option value="psychological">دعم نفسي</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <textarea rows="5" placeholder="تفاصيل المشكلة" class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full gradient-button text-white font-bold py-4 px-8 rounded-lg text-lg">
+                        إرسال الرسالة
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Badge -->
+    <div class="developer-badge">
+        <p class="text-white text-sm">Developed by Ares</p>
+    </div>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const mailtoLink = `mailto:grafvbn1212@gmail.com?subject=طلب مساعدة من ${formData.get('name')}&body=الاسم: ${formData.get('name')}%0D%0Aالبريد الإلكتروني: ${formData.get('email')}%0D%0Aنوع المساعدة: ${formData.get('type')}%0D%0A%0D%0Aالتفاصيل:%0D%0A${formData.get('message')}`;
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>
