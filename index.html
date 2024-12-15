@@ -95,6 +95,20 @@
             border-radius: 50px;
             box-shadow: 0 5px 15px rgba(255, 8, 68, 0.3);
         }
+
+        .social-icons a {
+            background: var(--primary-gradient);
+            padding: 12px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 8, 68, 0.4);
+        }
     </style>
 </head>
 <body class="text-gray-100">
@@ -126,78 +140,15 @@
         </div>
     </section>
 
-    <!-- Instructions Section -->
-    <section id="instructions" class="py-32">
+    <!-- Social Media Section -->
+    <section class="py-20 bg-gray-900 text-center">
         <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-20 gradient-text" data-aos="fade-up">خطوات مهمة</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="glass-card p-8" data-aos="fade-up">
-                    <h3 class="text-2xl font-bold mb-6 gradient-text">خطوات فورية</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li class="flex items-start space-x-4">
-                            <span class="text-red-500">1.</span>
-                            <p>لا تستجب لمطالب المبتز - تجاهل التهديدات</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-red-500">2.</span>
-                            <p>احتفظ بجميع الأدلة والمحادثات</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-red-500">3.</span>
-                            <p>قم بتأمين حساباتك فوراً وتغيير كلمات المرور</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-red-500">4.</span>
-                            <p>تواصل معنا للحصول على المساعدة الفورية</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-6 gradient-text">نصائح مهمة</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li>❌ لا تقم بالدفع أبداً - سيزيد الابتزاز</li>
-                        <li>✅ تحدث مع شخص تثق به</li>
-                        <li>✅ وثّق كل شيء</li>
-                        <li>❌ لا تحذف أي دليل</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Help Section -->
-    <section id="help" class="py-32 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-5xl font-bold text-center mb-20 gradient-text" data-aos="fade-up">كيف نساعدك</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="glass-card p-8" data-aos="fade-up">
-                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">الدعم التقني</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li>• تأمين الحسابات</li>
-                        <li>• استعادة الحسابات المخترقة</li>
-                        <li>• حماية البيانات الشخصية</li>
-                        <li>• تتبع المبتز تقنياً</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">الدعم القانوني</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li>• استشارات قانونية مجانية</li>
-                        <li>• تقديم البلاغات الرسمية</li>
-                        <li>• توجيه الدعم من قبل محاميين متخصصين</li>
-                    </ul>
-                </div>
-
-                <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-2xl font-bold mb-6 text-center gradient-text">الدعم النفسي</h3>
-                    <ul class="space-y-4 text-gray-300">
-                        <li>• جلسات استماع ودعم نفسي</li>
-                        <li>• تقنيات التعامل مع الضغوط النفسية</li>
-                        <li>• أرقام طوارئ للدعم النفسي</li>
-                    </ul>
-                </div>
+            <h2 class="text-4xl font-bold mb-10 gradient-text">تابعنا على وسائل التواصل الاجتماعي</h2>
+            <div class="social-icons">
+                <a href="https://t.me/tx_5w" target="_blank" class="text-white"><i class="fab fa-telegram-plane fa-3x"></i></a>
+                <a href="https://www.tiktok.com/@18.51" target="_blank" class="text-white"><i class="fab fa-tiktok fa-3x"></i></a>
+                <a href="mailto:grafvbn1212@gmail.com" class="text-white"><i class="fas fa-envelope fa-3x"></i></a>
+                <a href="mailto:grafvbn1212@yopmail.com" class="text-white"><i class="fas fa-envelope fa-3x"></i></a>
             </div>
         </div>
     </section>
@@ -219,6 +170,7 @@
         <span>مطور: @tx_5w</span>
     </div>
 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script>
         AOS.init();
     </script>
