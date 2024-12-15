@@ -19,7 +19,7 @@
             font-family: 'Cairo', sans-serif;
             background: #0a0a0a;
         }
-        
+
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
                         url('/api/placeholder/1920/1080') center/cover;
@@ -186,18 +186,16 @@
                     <ul class="space-y-4 text-gray-300">
                         <li>• استشارات قانونية مجانية</li>
                         <li>• تقديم البلاغات الرسمية</li>
-                        <li>• التواصل مع الجهات المختصة</li>
-                        <li>• متابعة القضية قانونياً</li>
+                        <li>• توجيه الدعم من قبل محاميين متخصصين</li>
                     </ul>
                 </div>
 
                 <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="text-2xl font-bold mb-6 text-center gradient-text">الدعم النفسي</h3>
                     <ul class="space-y-4 text-gray-300">
-                        <li>• جلسات دعم نفسي</li>
-                        <li>• استشارات متخصصة</li>
-                        <li>• خطة تعافي شخصية</li>
-                        <li>• متابعة مستمرة</li>
+                        <li>• جلسات استماع ودعم نفسي</li>
+                        <li>• تقنيات التعامل مع الضغوط النفسية</li>
+                        <li>• أرقام طوارئ للدعم النفسي</li>
                     </ul>
                 </div>
             </div>
@@ -205,56 +203,24 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-32">
-        <div class="container mx-auto px-6">
-            <div class="glass-card p-12 max-w-4xl mx-auto" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-center mb-12 gradient-text">تواصل معنا</h2>
-                <p class="text-gray-300 text-center mb-8">نحن هنا للمساعدة 24/7. كل المعلومات سرية تماماً</p>
-                <form id="contactForm" class="space-y-6">
-                    <div class="space-y-2">
-                        <input type="text" placeholder="الاسم (اختياري)" class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none">
-                    </div>
-                    <div class="space-y-2">
-                        <input type="email" placeholder="البريد الإلكتروني" class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none" required>
-                    </div>
-                    <div class="space-y-2">
-                        <select class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none">
-                            <option value="">نوع المساعدة المطلوبة</option>
-                            <option value="technical">دعم تقني</option>
-                            <option value="legal">دعم قانوني</option>
-                            <option value="psychological">دعم نفسي</option>
-                        </select>
-                    </div>
-                    <div class="space-y-2">
-                        <textarea rows="5" placeholder="تفاصيل المشكلة" class="w-full px-6 py-4 rounded-lg bg-gray-800 border border-gray-700 focus:border-red-500 focus:outline-none" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full gradient-button text-white font-bold py-4 px-8 rounded-lg text-lg">
-                        إرسال الرسالة
-                    </button>
-                </form>
+    <section id="contact" class="py-32 bg-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-12 gradient-text" data-aos="fade-up">اتصل بنا</h2>
+            <div class="space-x-8">
+                <a href="https://t.me/tx_5w" class="text-gray-300 hover:text-white">تلجرام (@tx_5w)</a>
+                <a href="https://www.tiktok.com/@18.51" class="text-gray-300 hover:text-white">تيك توك (@18.51)</a>
+                <a href="mailto:grafvbn1212@gmail.com" class="text-gray-300 hover:text-white">البريد الإلكتروني</a>
+                <a href="mailto:grafvbn1212@yopmail.com" class="text-gray-300 hover:text-white">البريد الثاني</a>
             </div>
         </div>
     </section>
 
-    <!-- Developer Badge -->
-    <div class="developer-badge">
-        <p class="text-white text-sm">Developed by Ares</p>
+    <div class="developer-badge text-white text-sm">
+        <span>مطور: @tx_5w</span>
     </div>
 
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            const mailtoLink = `mailto:grafvbn1212@gmail.com?subject=طلب مساعدة من ${formData.get('name')}&body=الاسم: ${formData.get('name')}%0D%0Aالبريد الإلكتروني: ${formData.get('email')}%0D%0Aنوع المساعدة: ${formData.get('type')}%0D%0A%0D%0Aالتفاصيل:%0D%0A${formData.get('message')}`;
-            window.location.href = mailtoLink;
-        });
+        AOS.init();
     </script>
 </body>
 </html>
